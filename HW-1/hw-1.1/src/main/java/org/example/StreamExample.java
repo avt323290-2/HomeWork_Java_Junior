@@ -2,8 +2,15 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * Программа для вычисления среднего значения четных чисел в списке с использованием Stream API.
+ */
 public class StreamExample {
 
+    /**
+     * Главный метод программы.
+     * @param args Аргументы командной строки (не используются).
+     */
     public static void main(String[] args) {
         List<Integer> numbers = readNumbersFromConsole();
 
@@ -16,6 +23,10 @@ public class StreamExample {
         System.out.println("Среднее значение четных чисел: " + average);
     }
 
+    /**
+     * Метод для чтения чисел из консоли.
+     * @return Список введенных чисел.
+     */
     private static List<Integer> readNumbersFromConsole() {
         Scanner scanner = new Scanner(System.in);
 

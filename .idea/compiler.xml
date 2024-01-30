@@ -7,10 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="hw-1.1" />
+        <module name="hw_1.2" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="HW-1" target="21" />
+      <module name="hw-1.2" target="21" />
     </bytecodeTargetLevel>
   </component>
 </project>
