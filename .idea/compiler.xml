@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="hw-1.1" />
         <module name="hw_1.2" />
+        <module name="HW-2.1" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
