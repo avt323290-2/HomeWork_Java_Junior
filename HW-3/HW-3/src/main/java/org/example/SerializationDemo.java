@@ -1,9 +1,11 @@
 package org.example;
 
 import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
- * Демонстрация сериализации и десериализации объекта класса Student.
+ * Демонстрация сериализации и десериализации объектов класса Student.
  */
 public class SerializationDemo {
     /**
@@ -12,40 +14,46 @@ public class SerializationDemo {
      * @param args Параметры командной строки (не используются)
      */
     public static void main(String[] args) {
-        // Создаем объект Student
-        Student student = new Student("John", 20, 3.5);
+        // Создаем список студентов
+        List<Student> students = new ArrayList<>();
+        students.add(new Student("John", 20, 3.5));
+        students.add(new Student("Alice", 21, 3.8));
+        students.add(new Student("Bob", 19, 3.2));
 
-        // Сериализация объекта в файл
-        serializeStudent(student);
+        // Сериализация объектов в файл
+        serializeStudents(students);
 
-        // Десериализация объекта из файла
-        Student deserializedStudent = deserializeStudent();
-        if (deserializedStudent != null) {
-            System.out.println("Deserialized student: " + deserializedStudent);
+        // Десериализация объектов из файла
+        List<Student> deserializedStudents = deserializeStudents();
+        if (deserializedStudents != null) {
+            System.out.println("Deserialized students:");
+            for (Student student : deserializedStudents) {
+                System.out.println(student);
+            }
         }
     }
 
     /**
-     * Сериализует объект Student в файл.
+     * Сериализует список студентов в файл.
      *
-     * @param student Студент для сериализации
+     * @param students Список студентов для сериализации
      */
-    private static void serializeStudent(Student student) {
-        try (ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream("student.ser"))) {
-            outputStream.writeObject(student);
+    private static void serializeStudents(List<Student> students) {
+        try (ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream("students.ser"))) {
+            outputStream.writeObject(students);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
     /**
-     * Десериализует объект Student из файла.
+     * Десериализует список студентов из файла.
      *
-     * @return Десериализованный студент
+     * @return Десериализованный список студентов
      */
-    private static Student deserializeStudent() {
-        try (ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream("student.ser"))) {
-            return (Student) inputStream.readObject();
+    private static List<Student> deserializeStudents() {
+        try (ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream("students.ser"))) {
+            return (List<Student>) inputStream.readObject();
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
             return null;
