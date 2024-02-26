@@ -5,7 +5,7 @@ import java.net.Socket;
 import java.util.Scanner;
 
 /**
- * Представляет клиентское приложение для обмена сообщениями с сервером.
+ * Класс, представляющий клиентскую часть чата.
  */
 public class Client {
 
@@ -15,15 +15,14 @@ public class Client {
     private final String name;
 
     /**
-     * Инициализирует новый экземпляр класса Client.
+     * Конструктор класса Client.
      *
-     * @param socket   Сокет для подключения к серверу.
-     * @param userName Имя пользователя.
+     * @param socket    Сокет для подключения к серверу.
+     * @param userName  Имя пользователя.
      */
     public Client(Socket socket, String userName) {
         this.socket = socket;
         name = userName;
-
         try {
             bufferedWriter = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
             bufferedReader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
@@ -57,12 +56,12 @@ public class Client {
     }
 
     /**
-     * Отправляет личное сообщение заданному получателю.
+     * Отправляет личное сообщение другому клиенту.
      *
      * @param recipient Получатель личного сообщения.
-     * @param message   Текст личного сообщения.
+     * @param message   Личное сообщение.
      */
-    private void sendPrivateMessage(String recipient, String message) {
+    public void sendPrivateMessage(String recipient, String message) {
         try {
             bufferedWriter.write("@" + recipient + " " + message);
             bufferedWriter.newLine();
@@ -73,11 +72,28 @@ public class Client {
     }
 
     /**
+     * Слушает входящие сообщения от сервера.
+     */
+    public void listenForMessage() {
+        new Thread(() -> {
+            String message;
+            while (socket.isConnected()) {
+                try {
+                    message = bufferedReader.readLine();
+                    System.out.println(message);
+                } catch (Exception e) {
+                    closeEverything(socket, bufferedReader, bufferedWriter);
+                }
+            }
+        }).start();
+    }
+
+    /**
      * Закрывает соединение с сервером и освобождает ресурсы.
      *
-     * @param socket         Сокет для подключения к серверу.
-     * @param bufferedReader Поток ввода данных от сервера.
-     * @param bufferedWriter Поток вывода данных на сервер.
+     * @param socket         Сокет сервера.
+     * @param bufferedReader Поток чтения данных от сервера.
+     * @param bufferedWriter Поток записи данных к серверу.
      */
     private void closeEverything(Socket socket, BufferedReader bufferedReader, BufferedWriter bufferedWriter) {
         try {
