@@ -1,0 +1,58 @@
+Index: src/main/java/org/example/SerializationDemo.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package org.example;\r\n\r\nimport java.io.*;\r\n\r\n/**\r\n * Демонстрация сериализации и десериализации объекта класса Student.\r\n */\r\npublic class SerializationDemo {\r\n    /**\r\n     * Основной метод программы.\r\n     *\r\n     * @param args Параметры командной строки (не используются)\r\n     */\r\n    public static void main(String[] args) {\r\n        // Создаем объект Student\r\n        Student student = new Student(\"John\", 20, 3.5);\r\n\r\n        // Сериализация объекта в файл\r\n        serializeStudent(student);\r\n\r\n        // Десериализация объекта из файла\r\n        Student deserializedStudent = deserializeStudent();\r\n        if (deserializedStudent != null) {\r\n            System.out.println(\"Deserialized student: \" + deserializedStudent);\r\n        }\r\n    }\r\n\r\n    /**\r\n     * Сериализует объект Student в файл.\r\n     *\r\n     * @param student Студент для сериализации\r\n     */\r\n    private static void serializeStudent(Student student) {\r\n        try (ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream(\"student.ser\"))) {\r\n            outputStream.writeObject(student);\r\n        } catch (IOException e) {\r\n            e.printStackTrace();\r\n        }\r\n    }\r\n\r\n    /**\r\n     * Десериализует объект Student из файла.\r\n     *\r\n     * @return Десериализованный студент\r\n     */\r\n    private static Student deserializeStudent() {\r\n        try (ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream(\"student.ser\"))) {\r\n            return (Student) inputStream.readObject();\r\n        } catch (IOException | ClassNotFoundException e) {\r\n            e.printStackTrace();\r\n            return null;\r\n        }\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/org/example/SerializationDemo.java b/src/main/java/org/example/SerializationDemo.java
+--- a/src/main/java/org/example/SerializationDemo.java	(revision 00ba0dfbfe11bb3e65432e361fb6398881bed2c0)
++++ b/src/main/java/org/example/SerializationDemo.java	(date 1707483815847)
+@@ -2,6 +2,7 @@
+ 
+ import java.io.*;
+ 
++<<<<<<< HEAD
+ /**
+  * Демонстрация сериализации и десериализации объекта класса Student.
+  */
+@@ -11,6 +12,9 @@
+      *
+      * @param args Параметры командной строки (не используются)
+      */
++=======
++public class SerializationDemo {
++>>>>>>> origin/main
+     public static void main(String[] args) {
+         // Создаем объект Student
+         Student student = new Student("John", 20, 3.5);
+@@ -25,11 +29,14 @@
+         }
+     }
+ 
++<<<<<<< HEAD
+     /**
+      * Сериализует объект Student в файл.
+      *
+      * @param student Студент для сериализации
+      */
++=======
++>>>>>>> origin/main
+     private static void serializeStudent(Student student) {
+         try (ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream("student.ser"))) {
+             outputStream.writeObject(student);
+@@ -38,11 +45,14 @@
+         }
+     }
+ 
++<<<<<<< HEAD
+     /**
+      * Десериализует объект Student из файла.
+      *
+      * @return Десериализованный студент
+      */
++=======
++>>>>>>> origin/main
+     private static Student deserializeStudent() {
+         try (ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream("student.ser"))) {
+             return (Student) inputStream.readObject();

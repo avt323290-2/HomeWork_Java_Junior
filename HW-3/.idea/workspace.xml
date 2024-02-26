@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ca46af89-62fe-499b-bc96-cd16be6b8074" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/HW-3.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW-3.1/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW-3/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/HW-3.1/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW-3/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW-3/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/HW-3.1/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW-3/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/HW-3.1/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW-3/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/HW-3.1/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW-3/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/HW-3.1/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW-3/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/HW-3.1/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW-3/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/HW-3.1/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW-3/src/main/java/org/example/SerializationDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/HW-3.1/src/main/java/org/example/SerializationDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW-3/src/main/java/org/example/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/HW-3.1/src/main/java/org/example/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW-3/student.ser" beforeDir="false" afterPath="$PROJECT_DIR$/HW-3.1/student.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW-3/students.ser" beforeDir="false" afterPath="$PROJECT_DIR$/HW-3.1/students.ser" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 7
+}]]></component>
+  <component name="ProjectId" id="2c8Dm8HgmzjI5n4EZpfJUFiaz9P" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "E:/Мои документы/Миша/GeekBrains/25.Java Junior (семинары)/HomeWork_Java_Junior/HW-3",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.importing",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-19.0.2-corretto-19.0.2-f644763e9732-1e16d6ec" />
+        <option value="jdk-21.0.1-openjdk-21.0.1-f644763e9732-f98dd351" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ca46af89-62fe-499b-bc96-cd16be6b8074" name="Changes" comment="" />
+      <created>1707484467722</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1707484467722</updated>
+      <workItem from="1707484468759" duration="102000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>
